@@ -183,7 +183,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
     // When Save modal get opened, update its form fields according to the current task, or empty them if it is a new one
     saveModal.addEventListener('shown.bs.modal', (e) => {
-        resetSaveForm(e.relatedTarget.dataset);
+        resetSaveForm();
 
         // Get the task ID from the triggering button
         var id = e.relatedTarget.dataset.taskId ?? null;
