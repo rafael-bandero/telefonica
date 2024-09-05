@@ -1,0 +1,12 @@
+header .nav-link {
+    color: #ffffff;
+}
+
+header .nav-link:hover {
+    color: #5e5e5e;
+}
+
+.telefonica {
+    color: #ffffff;
+    background-color: #2c9df0;
+}
