@@ -1,10 +1,3 @@
-<?php
-require_once('Task.php');
-
-use Telefonica\Task;
-
-Task::fetchAll();
-?>
 <!doctype html>
 <html lang="en">
 
