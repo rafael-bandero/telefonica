@@ -47,7 +47,7 @@
                         data-bs-toggle="modal" data-bs-target="#saveModal" data-task-completed="false"><i class="bi bi-plus-lg"></i></button>
                 </div>
 
-                <div id="templateTodo">
+                <div id="templateTodo" class="d-none">
                     {{#each tasks}}
                     {{#if this.completed}}
                     {{false}}
@@ -83,7 +83,7 @@
                         data-bs-toggle="modal" data-bs-target="#saveModal" data-task-completed="true"><i class="bi bi-plus-lg"></i></button>
                 </div>
 
-                <div id="templateDone">
+                <div id="templateDone" class="d-none">
                     {{#each tasks}}
                     {{#if this.completed}}
                     <div id="task{{this.id}}" class="card mb-4">
@@ -167,7 +167,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/js.js"></script>
 </body>
 
 </html>

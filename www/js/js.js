@@ -22,6 +22,9 @@ function populateTemplate(templateSelector, data) {
 
     // Replace template with live data
     template.innerHTML = parsedHtml;
+
+    // Unhide template
+    template.classList.remove('d-none');
 }
 
 /**
