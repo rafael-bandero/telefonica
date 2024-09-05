@@ -58,7 +58,7 @@ class Task {
         // Set Return Transfer to true
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-        // Set request method an data
+        // Set request method and data
         switch ($_SERVER['REQUEST_METHOD']) {
             case "GET":
                 curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
