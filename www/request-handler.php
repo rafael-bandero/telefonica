@@ -11,7 +11,7 @@ $queryStr = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
 // Create params array from query string
 parse_str($queryStr, $params);
 
-// Execute apropriate request
+// Execute appropriate request
 $response = match ($params['action']) {
     'fetchAll' => Task::fetchAll(),
     'delete' => Task::delete($params['id']),
