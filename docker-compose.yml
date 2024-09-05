@@ -1,0 +1,29 @@
+services:
+  php:
+    image: php:8.3-fpm-alpine
+    container_name: php
+    restart: unless-stopped
+                        
+    volumes:
+      - ./www:/var/www/html
+    networks:
+      - app-network
+
+  webserver:
+    depends_on:
+      - php
+    build: ./nginx
+    container_name: webserver
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./www:/var/www/html
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
