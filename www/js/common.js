@@ -64,6 +64,9 @@ function showAlert(type, message) {
     // Show the hidden alert
     template.classList.remove('d-none');
 
+    // Scroll window top to make the alert visible
+    window.scroll(0, 0);
+
     // Hide the alert after 3 seconds
     setTimeout(function() {
         template.classList.add('d-none');
